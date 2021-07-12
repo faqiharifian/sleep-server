@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sleep-server
+  labels:
+    app: sleep-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sleep-server
+  template:
+    metadata:
+      labels:
+        app: sleep-server
+    spec:
+      containers:
+        - name: sleep-server
+          image: faqiharifian/sleep-server:latest
+          ports:
+            - containerPort: 8080
