@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: sleep-server
-          image: faqiharifian/sleep-server:0.0.1
+          image: faqiharifian/sleep-server:0.0.2
           ports:
             - containerPort: 8080
